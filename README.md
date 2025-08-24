@@ -27,15 +27,24 @@ WebブラウザからURLにアクセスするだけで、以下のゲームを�
 ---
 
 ## ディレクトリ構成
+```
 portfolio/
-├── games/ # 元のローカル用コード
-├── server/ # サーバー側コード
-│ ├── app.py # Flaskアプリ
-│ └── game_logic/ # 各ゲームのロジック
-└── frontend/ # Web UI
-├── index.html
-├── style.css
-└── main.js
+ ├─ games/                # ローカルで動くPygameコード
+ │   ├─ othello/
+ │   ├─ shogi/
+ │   └─ gungi/
+ ├─ server/               # サーバー側（Flask＋Socket.IO）
+ │   ├─ app.py
+ │   ├─ requirements.txt
+ │   └─ game_logic/
+ ├─ frontend/             # Web UI（HTML/CSS/JS）
+ │   ├─ index.html
+ │   ├─ style.css
+ │   └─ main.js
+ └─ docs/                 # ドキュメント・構成図
+     ├─ README.md
+     └─ diagram.png
+```
 
 
 ---
