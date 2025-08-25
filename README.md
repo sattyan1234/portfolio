@@ -28,19 +28,28 @@ WebブラウザからURLにアクセスするだけで、以下のゲームを�
 ## ディレクトリ構成
 ```
 portfolio/
- ├─ games/                # ローカルで動くPygameコード
- │   ├─ othello/
- │   ├─ shogi/
- │   └─ gungi/
- ├─ server/               # サーバー側（Flask＋Socket.IO）
- │   ├─ app.py
- │   ├─ requirements.txt
- │   └─ game_logic/
- ├─ frontend/             # Web UI（HTML/CSS/JS）
- │   ├─ index.html
- │   ├─ style.css
- │   └─ main.js
- └─ docs/                 # ドキュメント・構成図
+├── server/
+│   ├── app.py            #メインサーバー(Flask)  
+│   ├── games/            #ゲームの関数などロジック部分
+│   │   ├── othello/
+│   │   │   └── logic.py
+│   │   ├── shogi/
+│   │   │   └── logic.py
+│   │   └── boardgame3/
+│   │       └── logic.py
+│   └── templates/         #
+│       ├── index.html        
+│       ├── othello.html
+│       ├── shogi.html
+│       └── gungi.html
+├── static/
+│   ├── css/
+│   ├── js/
+│   │   ├── othello.js
+│   │   ├── shogi.js
+│   │   └── boardgame3.js
+│
+└── docs/                 # ドキュメント・構成図
      ├─ README.md
      └─ diagram.png
 ```
