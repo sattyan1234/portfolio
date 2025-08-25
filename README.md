@@ -110,7 +110,7 @@ portfolio/
 ---
 
 ## スクリーンショット
-![トップ画面](docs/screenshot.png)
+
 
 ---
 
