@@ -58,7 +58,7 @@ portfolio/
 
 ## URL（デモ環境）
 [http://<EC2のパブリックIP>:8000](http://<EC2のパブリックIP>:8000)
-（※AWS EC2で稼働中）
+（※AWS EC2で稼働）
 
 ---
 
