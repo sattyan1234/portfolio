@@ -36,7 +36,7 @@ portfolio/
 │   │   │   └── logic.py
 │   │   ├── shogi/
 │   │   │   └── logic.py
-│   │   └── boardgame3/
+│   │   └── gungi/
 │   │       └── logic.py
 │   └── templates/         #
 │       ├── index.html        
@@ -48,7 +48,7 @@ portfolio/
 │   ├── js/
 │   │   ├── othello.js
 │   │   ├── shogi.js
-│   │   └── boardgame3.js
+│   │   └── gungi.js
 │
 └── docs/                 # ドキュメント・構成図
      ├─ README.md
