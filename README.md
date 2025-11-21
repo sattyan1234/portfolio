@@ -1,4 +1,4 @@
-# ポートフォリオ：オンライン対戦ボードゲーム集
+# オンライン対戦ボードゲーム集
 
 ## プロジェクト概要
 AWS上で稼働するオンライン対戦型ボードゲーム集です。  
@@ -11,48 +11,42 @@ WebブラウザからURLにアクセスするだけで、以下のゲームを�
 -
 -
 -
----
-
-## 使用技術
-### サーバーサイド
-
-
-### フロントエンド
-
-
-### インフラ
-
 
 ---
 
 ## ディレクトリ構成
 ```
 portfolio/
-├── games_local/           #ローカルで遊べるゲームのフォルダ
 ├── server/
 │   ├── app.py            #メインサーバー(Flask)  
-│   ├── games/            #ゲームの関数などロジック部分
+│   ├── logic/            #ゲームの関数などロジック部分
 │   │   ├── othello/
-│   │   │   └── logic.py
+│   │   │   └── logic_othello.py
 │   │   ├── shogi/
-│   │   │   └── logic.py
+│   │   │   └── logic_shogi.py
 │   │   └── gungi/
-│   │       └── logic.py
-│   └── templates/         #
-│       ├── index.html        
-│       ├── othello.html
-│       ├── shogi.html
-│       └── gungi.html
-├── static/
-│   ├── css/
-│   ├── js/
-│   │   ├── othello.js
-│   │   ├── shogi.js
-│   │   └── gungi.js
+│   │       └── logic_gungi.py
+│   ├── html/            #html
+│   │   ├── start_index.html        
+│   │   ├── othello.html
+│   │   ├── shogi.html
+│   │   └── gungi.html
+│   └── static/
+│       ├── css/            #css
+│       │    ├── othello.js
+│       │    ├── shogi.js
+│       │    └── gungi.js
+│       └── js/            #JS
+│            ├── othello.js
+│            ├── othello_image/
+│            ├── shogi.js
+│            ├── shogi_image/
+│            ├── gungi.js
+│            └── gungi_image/
 │
-└── docs/                 # ドキュメント・構成図
-     ├─ README.md
-     └─ diagram.png
+├── games/           #ローカルで遊べるゲームのフォルダ
+|
+└── README.md
 ```
 ---
 
@@ -77,7 +71,7 @@ portfolio/
 
 ## 開発方針
 - 開発モデルはウォーターフォールを参考にしつつ、実装段階で小さなアジャイルサイクルを回しました。
-- ゲームの難易度を段階的に上げることで、UI・通信・ゲームロジックの拡張に対応できるよう設計しました。
+- 実装難易度を段階的に上げることで、UI・通信・ゲームロジックの拡張に対応できるよう設計しました。
     - **1.オセロ**：最もシンプルなロジックで、基本の通信処理とUI連携を実装
     - **2.将棋**：駒の種類・ルールが複雑なため、データ構造とサーバー設計を拡張
     - **3.軍議**：高さの概念を追加。戦略性が高く、カスタムルール対応のため、設計をより汎用化
@@ -117,24 +111,6 @@ portfolio/
 - スマホUIの最適化
 - ゲーム履歴の保存機能
 
----
-
-## スクリーンショット
-
-
----
-
-## 動作方法（ローカル開発）
-bash
-# 仮想環境作成
-python3 -m venv venv
-source venv/bin/activate
-
-# 必要ライブラリのインストール
-pip install -r requirements.txt
-
-# サーバー起動
-cd server
 python app.py
 ブラウザで http://localhost:8000 にアクセス
 
