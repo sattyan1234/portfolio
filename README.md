@@ -33,15 +33,17 @@ portfolio/
 │   │   └── gungi.html
 │   └── static/
 │       ├── css/            #css
-│       │    ├── othello.js
-│       │    ├── shogi.js
-│       │    └── gungi.js
+│       │    ├── start_style.css
+│       │    ├── othellostyle.css
+│       │    ├── shogistyle.js
+│       │    └── gungistyle.js
 │       └── js/            #JS
-│            ├── othello.js
+│            ├── start_main.js
+│            ├── othellomain.js
 │            ├── othello_image/
-│            ├── shogi.js
+│            ├── shogimain.js
 │            ├── shogi_image/
-│            ├── gungi.js
+│            ├── gungimain.js
 │            └── gungi_image/
 │
 ├── games/           #ローカルで遊べるゲームのフォルダ
